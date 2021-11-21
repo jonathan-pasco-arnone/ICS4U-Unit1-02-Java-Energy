@@ -18,7 +18,7 @@ final class Energy {
     /**
     * Speed of light squared.
     */
-    public static final double SOLS = Math.pow(299792458, 2);
+    public static final double speedOfLightSquared = Math.pow(299792458, 2);
 
     /**
     * Throw an exception IllegalStateException.
@@ -53,12 +53,14 @@ final class Energy {
             mass = myObj.nextFloat();
 
             // Calculations
-            energy = mass * SOLS;
+            energy = mass * speedOfLightSquared;
             System.out.println("If the mass is " + mass
-                + "kg then the energy is " + energy);
-        } catch (java.util.InputMismatchException ex) {
+                + "kg then the energy is " + energy + "J");
+        }
+        catch (java.util.InputMismatchException ex) {
             System.out.println("That was not a valid integer");
-        } finally {
+        }
+        finally {
             System.out.println("\nDone.");
         }
     }
