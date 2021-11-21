@@ -56,11 +56,9 @@ final class Energy {
             energy = mass * SOLS;
             System.out.println("If the mass is " + mass
                 + "kg then the energy is " + energy);
-        }
-        catch (java.util.InputMismatchException ex) {
+        } catch (java.util.InputMismatchException ex) {
             System.out.println("That was not a valid integer");
-        }
-        finally {
+        } finally {
             System.out.println("\nDone.");
         }
     }
