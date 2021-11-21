@@ -1,4 +1,4 @@
-/**
+/*
 * This program calculates energy from mass.
 *
 * @author  Jonathan Pasco-Arnone
@@ -8,7 +8,6 @@
 
 // Imports.
 import java.util.Scanner;
-import java.lang.Math;
 
 /**
 * This program calculates energy from mass.
@@ -23,11 +22,11 @@ final class Energy {
 
     /**
     * Throw an exception IllegalStateException.
-    * if this ever is called
-    *
-    * @throws IllegalStateException
-    *
-    */
+    * if this ever is called
+    *
+    * @throws IllegalStateException
+    *
+    */
     private Energy() {
         throw new IllegalStateException("Cannot be instantiated");
     }
@@ -46,20 +45,21 @@ final class Energy {
         // Ask for inputs
         System.out.println("Please enter mass in kg: ");
 
-        /**
+        /*
         * This accepts an inputted and tests it.
         */
         try {
             // Stores float in variable.
-            mass =myObj.nextFloat();
+            mass = myObj.nextFloat();
 
             // Calculations
             energy = mass * SOLS;
             System.out.println("If the mass is " + mass + "kg then the energy is " + energy);
-
-            System.out.println("\nDone.");
-        } catch (Exception e) {
+        }
+        catch (java.util.InputMismatchException ex) {
             System.out.println("That was not a valid integer");
+        }
+        finally {
             System.out.println("\nDone.");
         }
     }
